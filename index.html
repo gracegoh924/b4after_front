@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>explore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="api.js"></script>
+    <script src="index.js"></script>
+    
+    <style>
+
+        body {
+            background-color: #101322;
+            color:white;
+        }
+
+        .wrap {
+
+            margin: 100px auto 0 auto;
+            width: 50%;
+            background-color: #101322;
+            padding: 50px;
+
+        }
+
+        .card {
+            background-color: #101322;
+            border: 1px solid white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- <div>
+            <div>
+                <h1>Books</h1>
+            </div>
+            <div class="categories-filter">
+                <button type="button" id="btn" data-category-source="all" class="btns">전체</button>
+                <button type="button" id="btn1" data-category-source="['Fiction']" class="btns">['Fiction']</button>
+                <button type="button" id="btn2" data-category-source="['Cooking']" class="btns">['Cooking']</button>
+                <button type="button" id="btn3" data-category-source="['East and West']" class="btns">['East and West']</button>
+                <button type="button" id="btn4" data-category-source="['Gardening']" class="btns">['Gardening']</button>
+                <button type="button" id="btn5" data-category-source="['Religion']" class="btns">['Religion']</button>
+                <button type="button" id="btn6" data-category-source="['Canadian poetry']" class="btns">['Canadian poetry']</button>
+                <button type="button" id="btn7" data-category-source="['Short stories, English']" class="btns">['Short stories, English']</button>
+                <button type="button" id="btn8" data-category-source="['English fiction']" class="btns">['English fiction']</button>
+                <button type="button" id="btn9" data-category-source="['China']" class="btns">['China']</button>
+                <button type="button" id="btn10" data-category-source="['Body, Mind & Spirit']" class="btns">['Body, Mind & Spirit']</button>
+            </div>
+        </div> -->
+        <ol id="books" class="row row-cols-1 row-cols-m d-4 g-4"></ol>
+
+
+        <!-- <div id="books" class="row row-cols-1 row-cols-m d-4 g-4"> -->
+            <!-- <div class="col" id="book.category">
+                <div class="card" id="book.ISNB" onclick="booksDetail(this.id)">
+                    <img class="card-img-top" src="book.img_i">
+                    <div class="card-body">
+                        <h5 class="card-title">book.book_title</h5>
+                    </div>
+                </div>
+            </div> -->
+        <!-- </div> -->
+    </div>
+    <!-- <script>
+        $(document).on('click', '.btns', function(e){
+            var $type = $(this).data("category-source");
+            if($type == "all"){
+                $('.portfolio-block').hide()
+                $('.portfolio-block').show()
+            }else{
+                $('.portfolio-block').hide();
+                $('#'+$type + ".portfolio-block").show()
+            }
+        })
+    </script> -->
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book_list</title>
+
+    <script src="api.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>북스</h1>
+    <ol id="books"></ol>
+    
+</body>
+</html> -->

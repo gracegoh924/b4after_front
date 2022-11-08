@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="api.js"></script>
+    <title>로그인</title>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        /* font-family: 'Cinzel', serif; */
+    }
+
+    .bgimg {
+        width: 100%;
+        height: 100vh;
+        background-color: #101322;
+        /* background-image: linear-gradient(27deg, #004E95 50%, #013A6B 50%); */
+    }
+
+    .centerdiv {
+        width: 350px;
+        height: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 40px;
+        background-color: lightgrey;
+        transform: translate(-50%, -50%);
+        /* background-image: linear-gradient(27deg, #013A6B 50%, #004E95 50%); */
+        /* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); */
+    }
+
+    #profilepic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        position: relative;
+        top: -60px;
+        left: calc((350px - 120px) / 2)
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+        font-size: 2em;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    .inputbox {
+        width: calc(90% - 40px);
+        font-size: 0.9em;
+        height: 40px;
+        display: block;
+        margin: auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: none;
+    }
+
+    ::placeholder {
+        color: gray
+    }
+
+    button {
+        width: 100px;
+        height: 40px;
+        display: block;
+        margin: 0px 0px 1px auto;
+        color: white;
+        background-color: #0A84C6;
+        border: none;
+        border-radius: 10px;
+
+    }
+</style>
+
+<body>
+    <div class="bgimg">
+        <div class="centerdiv">
+            <img src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png" id="profilepic">
+            <h2>Login</h2>
+            <form>
+                <div>
+                    <input type="email" name="email" id="email" class="inputbox" placeholder="Email">
+                </div>
+                <br>
+                <div>
+                    <input type="password" name="password" id="password" class="inputbox" placeholder="Password">
+                </div>
+                <div class="inputbox" style="margin-top:10px; font-size: 0.95em">
+                    <input type="checkbox" onclick="func_agree()" class="custom-control-input" id="agreement">
+                    <label class="custom-control-label" for="agreement">비밀번호 표시</label>
+                </div>
+                <div class="inputbox" style="margin-top:20px; display:flex; flex-direction:row">
+                    <a href="/signup.html">회원가입하기</a>
+                    <button type="button" onclick="handleLogin()" class="btn btn-primary">로그인</button>
+                </div>
+                <p></p>
+                <div class="inputbox" style="display:flex; flex-direction:row">
+                    <!-- <button type="button" onclick="handleMock()" class="btn btn-outline-primary-sm" disabled>모크 api</button> -->
+                    <button type="button" onclick="handleLogout()" class="btn btn-outline-primary-sm">로그아웃</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function func_agree() {
+        var pw = document.getElementById("password");
+        if (pw.type == "password") {
+            pw.type = "text";
+        } else {
+            pw.type = "password";
+        }
+    }
+</script>
+
+</html>

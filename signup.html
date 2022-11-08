@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="api.js"></script>
+    <title>회원가입</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .bgimg {
+        width: 100%;
+        height: 100vh;
+        background-color: #101322;
+    }
+
+    .centerdiv {
+        width: 350px;
+        height: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 40px;
+        background-color: lightgrey;
+        transform: translate(-50%, -50%);
+    }
+
+    #profilepic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        position: relative;
+        top: -60px;
+        left: calc((350px - 120px) / 2)
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+        font-size: 2em;
+        margin-top: -40px;
+        margin-bottom: 20px;
+    }
+
+    .inputbox {
+        width: calc(90% - 40px);
+        font-size: 0.9em;
+        height: 40px;
+        display: block;
+        margin: auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: none;
+    }
+
+    ::placeholder {
+        color: gray
+    }
+
+    button {
+        width: calc(60% - 40px);
+        height: 40px;
+        display: block;
+        float: right;
+        margin: auto;
+        color: white;
+        background-color: #0A84C6;
+        border: none;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div class="bgimg">
+        <div class="centerdiv">
+            <img src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png" id="profilepic">
+            <h2>Sign Up</h2>
+            <form>
+                <div>
+                    <input type="email" name="email" id="email" class="inputbox" placeholder="Email">
+                </div>
+                <br>
+                <div>
+                    <input type="password" name="password" id="password" class="inputbox" placeholder="Password">
+                </div>
+                <br>
+                <div>
+                    <input type="password" name="password2" id="password2" class="inputbox" placeholder="Password 확인">
+                </div>
+                <div class="inputbox" style="margin-top:10px; font-size: 0.95em">
+                    <input type="checkbox" onclick="func_agree()" class="custom-control-input" id="agreement">
+                    <label class="custom-control-label" for="agreement">비밀번호 표시</label>
+                </div>
+                <div class="inputbox" style="margin-top: 10px">
+                    <a href="/login.html">로그인하기</a>
+                    <button type="button" onclick="handleSignin()" class="btn btn-primary">가입하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function func_agree() {
+
+        var pw = document.getElementById("password");
+        if (pw.type == "password") {
+            pw.type = "text";
+        } else {
+            pw.type = "password";
+        }
+
+        var pw2 = document.getElementById("password2");
+        if (pw2.type == "password") {
+            pw2.type = "text";
+        } else {
+            pw2.type = "password";
+        }
+    }
+</script>
+
+</html>
