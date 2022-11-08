@@ -11,6 +11,11 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="api.js"></script>
+    <!-- 하단 바 CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
     <title>회원가입</title>
 </head>
 <style>
@@ -80,9 +85,39 @@
         border: none;
         border-radius: 10px;
     }
+
+    /* 하단 바 스타일 */
+    .wrap {
+        margin: 100px auto 0 auto;
+        width: 50%;
+        background-color: #101322;
+        padding: 50px;
+    }
+
+    .container {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .vertical {
+        text-align: center;
+        margin: auto 30px auto 30px;
+    }
+
+    #footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 5rem;
+    }
 </style>
 
 <body>
+
+
     <div class="bgimg">
         <div class="centerdiv">
             <img src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png" id="profilepic">
@@ -107,13 +142,82 @@
                     <a href="/login.html">로그인하기</a>
                     <button type="button" onclick="handleSignin()" class="btn btn-primary">가입하기</button>
                 </div>
+
+                <!-- 스크롤 연습 -->
+                <div style="color: green">
+                    ㅅ<br>ㅅ<br>ㅅ<br>ㄴ<br>ㄴ<br>ㄴ<br>ㄴ<br>ㄴ<br>ㄴ<br>ㅇ<br>ㅇ<br>
+                    ㅅ<br>ㅅ<br>ㅅ<br>
+                    <b>스크롤을 내려도 하단바는 고정됩니다</b>
+                    <br>ㄴ<br>ㄴ<br>ㄴ<br>ㄴ<br>ㄴ<br>ㅇ<br>ㅇ<br>
+                    ㅅ<br>ㅅ<br>ㅅ<br>ㄴ<br>ㄴ<br>ㄴ<br>
+                    ㄴ<br>ㄴ<br>ㄴ<br>ㅇ<br>ㅇ<br>ㅇ
+                </div>
+
             </form>
         </div>
     </div>
-</body>
-<script>
-    function func_agree() {
 
+    <!-- 하단 내비게이션 바 -->
+    <div id="footer" class="navibody" style="background-color:#101322">
+        <div class="container" style="color: #868e96">
+            <div type='button' onclick='go_home()' class="vertical">
+                <span class="material-symbols-outlined">home</span>
+                <p>홈</p>
+            </div>
+            <div type='button' onclick='go_collection()' class="vertical">
+                <span class="material-symbols-outlined">library_books</span>
+                <p>컬렉션</p>
+            </div>
+            <div type='button' onclick='go_community()' class="vertical">
+                <span class="material-symbols-outlined">comment</span>
+                <p>커뮤니티</p>
+            </div>
+            <div type='button' onclick='go_search()' class="vertical">
+                <span class="material-symbols-outlined">explore</span>
+                <p>탐색</p>
+            </div>
+            <div type='button' onclick='go_new()' class="vertical">
+                <span class="material-symbols-outlined">new_releases</span>
+                <p>신작</p>
+            </div>
+            <div type='button' onclick='go_mypage()' class="vertical">
+                <span class="material-symbols-outlined">person</span>
+                <p>마이페이지</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // 하단바 아이콘 클릭시 페이지 이동
+    function go_home() {
+        window.location.href = 'http://127.0.0.1:5500/login.html'
+        // window.location.href = 'http://127.0.0.1:5500/search.html'
+    }
+    function go_collection() {
+        window.location.href = 'http://127.0.0.1:5500/login.html'
+        // window.location.href = '/'
+    }
+    function go_community() {
+        window.location.href = 'http://127.0.0.1:5500/login.html'
+        // window.location.href = 'http://127.0.0.1:5500/community.html'
+    }
+    function go_search() {
+        window.location.href = 'http://127.0.0.1:5500/login.html'
+        // window.location.href = 'http://127.0.0.1:5500/search.html'
+    }
+    function go_new() {
+        window.location.href = 'http://127.0.0.1:5500/login.html'
+        // window.location.href = '/'
+    }
+    function go_mypage() {
+        window.location.href = 'http://127.0.0.1:5500/login.html'
+        // window.location.href = 'http://127.0.0.1:5500/mypage.html'
+    }
+
+
+    // 비밀번호 표시 기능
+    function func_agree() {
         var pw = document.getElementById("password");
         if (pw.type == "password") {
             pw.type = "text";
@@ -128,6 +232,7 @@
             pw2.type = "password";
         }
     }
+
 </script>
 
 </html>

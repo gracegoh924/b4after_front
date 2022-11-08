@@ -1,12 +1,15 @@
-// window.onload = () => {
-//     const payload = localStorage.getItem("payload");
+console.log("로딩 완료")
 
-//     const payload_parse = JSON.parse(payload)
-//     console.log(payload_parse.email)
 
-//     const intro = document.getElementById("intro")
-//     intro.innerText = payload_parse.email
-// }
+window.onload = () => {
+    const payload = localStorage.getItem("payload");
+
+    const payload_parse = JSON.parse(payload)
+    console.log(payload_parse.email)
+
+    const intro = document.getElementById("intro")
+    intro.innerText = payload_parse.email
+}
 
 //전체 보기(List)
 async function loadBook(){
