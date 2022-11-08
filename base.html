@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="api.js"></script>
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <style>
+        * {
+            background-color: #101322;
+            color: #868e96;
+        }
+
+        /* .wrap {
+            margin: 100px auto 0 auto;
+            width: 50%;
+            background-color: #101322;
+            padding: 50px;
+        } */
+
+        .container {
+            width: 50%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .vertical {
+            text-align: center;
+            margin-right: 60px;
+        }
+    </style>
+
+</head>
+
+<body style="background-color:#101322">
+    <!-- 로그아웃 버튼 -->
+    <div style="float: right; color: #868e96; padding: 20px">
+        <button type="button" onclick="handleLogout()" style="color: lightgray" class="btn btn-link-sm">로그아웃</button>
+    </div>
+
+    <div class="container">
+        <div class="vertical">
+            <span class="material-symbols-outlined">home</span>
+            <p>홈</p>
+        </div>
+        <div class="vertical">
+            <span class="material-symbols-outlined">library_books</span>
+            <p>컬렉션</p>
+        </div>
+        <div class="vertical">
+            <span class="material-symbols-outlined">comment</span>
+            <p>커뮤니티</p>
+        </div>
+        <div class="vertical">
+            <span class="material-symbols-outlined">explore</span>
+            <p>탐색</p>
+        </div>
+        <div class="vertical">
+            <span class="material-symbols-outlined">new_releases</span>
+            <p>신작</p>
+        </div>
+        <div class="vertical">
+            <span class="material-symbols-outlined">person</span>
+            <p>마이페이지</p>
+        </div>
+
+
+    </div>
+
+    <script>
+        // 하단바 아이콘 클릭시 페이지 이동
+        function go_home() {
+            window.location.href = 'http://127.0.0.1:5500/home.html'
+        }
+        function go_collection() {
+            window.location.href = '/'
+        }
+        function go_community() {
+            window.location.href = 'http://127.0.0.1:5500/community.html'
+        }
+        function go_search() {
+            window.location.href = 'http://127.0.0.1:5500/index.html'
+        }
+        function go_new() {
+            window.location.href = '/'
+        }
+        function go_mypage() {
+            window.location.href = 'http://127.0.0.1:5500/mypage.html'
+        }
+    </script>
+</body>
+
+</html>
