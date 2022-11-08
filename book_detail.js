@@ -12,10 +12,10 @@ async function loadBook(book_id){
     const publisher = document.getElementById("publisher")
     const description = document.getElementById("description")
 
-    img_url.innerText = book.img_url
-    author.innerText = book.author
-    publisher.innerText = book.publisher
-    description.innerText = book.description
+    img_url.innerText = book.img_l
+    author.innerText = book.book_author
+    publisher.innerText = book.book_publisher
+    description.innerText = book.summary
 
 
     const review_section = document.getElementById("review_section")
@@ -32,6 +32,13 @@ async function loadBook(book_id){
 async function writeReview(){
     const review_content = document.getElementById("review_content")
     const review = await postReview(book_id, review_content.value)
+}
+
+
+function reviewupdate(){
+    const review_content = document.getElementById("review_section")[1]
+    review_content.style.visibility = "hidden"
+
 }
 
 

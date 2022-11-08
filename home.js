@@ -6,18 +6,18 @@ async function loadhome(){
 
     const homes = document.getElementById("homes")
 
-    Array.from(images).forEach(image => {
-        console.log(image)
-        const img = document.createElement('img')
+    console.log(images)
+    console.log(images.top_ten)
+    console.log(images.rec_books)
+    const img = document.createElement('img')
 
-        img.setAttribute("src", image.top_ten)
+    img.setAttribute("src", "http://127.0.0.1:8000"+images.top_ten)
+    img.setAttribute("src", "http://127.0.0.1:8000"+images.rec_books)
 
-        img.classList.add('card-img-top')
 
-        homes.appendChild(img)
-    });
+    img.classList.add('card-img-top')
+
+    homes.appendChild(img)
 }
 
 loadhome();
-
-
